@@ -1,0 +1,96 @@
+/*
+essential styles:
+these make the slideshow work
+*/
+*{
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.slides {
+    position: relative;
+    height: 150px;
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+}
+
+.slide {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    z-index: -999;
+    transition: opacity 0.25s;
+}
+
+.active {
+    opacity: 1;
+    z-index: 2;
+}
+
+/*
+non-essential styles:
+just for appearance; change whatever you want
+*/
+
+.slide {
+    font-size: 40px;
+    padding: 40px;
+    box-sizing: border-box;
+    background: #333;
+    color: #fff;
+}
+
+.slide:nth-of-type(1) {
+    background: red;
+}
+
+.slide:nth-of-type(2) {
+    background: orange;
+}
+
+.slide:nth-of-type(3) {
+    background: green;
+}
+
+.slide:nth-of-type(4) {
+    background: blue;
+}
+
+.slide:nth-of-type(5) {
+    background: purple;
+}
+
+/*customization*/
+html {
+  font-family: Arial, ;
+}
+
+.indicators {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.indicator,
+.control {
+  display: inline-block;
+  border: 1px solid gray;
+  background-color: #cccccc;
+  padding: 5px, 15px;
+  min-width: 75px;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  margin-right: 15px;
+  height: 30px;
+}
+
+.indicator.active {
+  background-color: red;
+}
